@@ -3441,13 +3441,13 @@ function Library:textbox(options)
 		},
 		Position = UDim2.new(1, -50,0, 16),
 		Size = UDim2.new(0, 50,0, 20),
-		TextSize = 12,
+		TextSize = 14,
 		PlaceholderText = options.Placeholder,
 		ClipsDescendants = true
 	}):round(5):stroke("Tertiary")
 
 	local writeIcon = textboxContainer:object("ImageLabel", {
-		Image = "http://www.roblox.com/asset/?id=8569329416",
+		Image = "http://www.roblox.com/asset/?id=14768664701",
 		AnchorPoint = Vector2.new(1, 0.5),
 		BackgroundTransparency = 1,
 		Position = UDim2.new(1, -13, 0.5, 0),
