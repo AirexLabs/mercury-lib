@@ -141,7 +141,7 @@ function Library:object(class, properties)
 	local forcedProps = {
 		BorderSizePixel = 0,
 		AutoButtonColor = false,
-		Font = Enum.Font.SourceSans,
+		Font = Enum.Font.Poppins,
 		Text = ""
 	}
 
@@ -657,7 +657,7 @@ function Library:create(options)
 		BackgroundTransparency = 1,
 		Position = UDim2.new(0, 5, 1, -6),
 		Size = UDim2.new(0.2, 0, 0, 10),
-		Font = Enum.Font.SourceSans,
+		Font = Enum.Font.Poppins,
 		Text = "Status | Idle",
 		Theme = {TextColor3 = "Tertiary"},
 		TextSize = 14,
@@ -680,7 +680,7 @@ function Library:create(options)
 		Position = UDim2.new(0, 25, 0.5, 0),
 		TextXAlignment = Enum.TextXAlignment.Left,
 		Size = UDim2.new(1, -45, 0.5, 0),
-		Font = Enum.Font.SourceSans,
+		Font = Enum.Font.Poppins,
 		TextTruncate = Enum.TextTruncate.AtEnd
 	})
 
@@ -1025,7 +1025,7 @@ function Library:notification(options)
 		BackgroundTransparency = 1,
 		Position = UDim2.fromOffset(23, 0),
 		Size = UDim2.new(1, -60,0, 20),
-		Font = Enum.Font.SourceSansBold,
+		Font = Enum.Font.PoppinsBold,
 		Text = options.Title,
 		Theme = {TextColor3 = "Tertiary"},
 		TextSize = 17,
@@ -1200,7 +1200,7 @@ function Library:tab(options)
 		Position = UDim2.new(0, 25, 0.5, 0),
 		TextXAlignment = Enum.TextXAlignment.Left,
 		Size = UDim2.new(1, -45, 0.5, 0),
-		Font = Enum.Font.SourceSans,
+		Font = Enum.Font.Poppins,
 		TextTruncate = Enum.TextTruncate.AtEnd
 	})
 
@@ -2415,7 +2415,7 @@ function Library:color_picker(options)
 
 					local label = holder:object("TextLabel", {
 						Text = "Color Picker",
-						Font = Enum.Font.SourceSansBold,
+						Font = Enum.Font.PoppinsBold,
 						AnchorPoint = Vector2.new(1,0),
 						BackgroundTransparency = 1,
 						Position = UDim2.fromScale(1, 0),
@@ -3153,7 +3153,7 @@ function Library:prompt(options)
 		BackgroundTransparency = 1,
 		Size = UDim2.new(1, 0, 0, 20),
 		TextXAlignment = Enum.TextXAlignment.Center,
-		Font = Enum.Font.SourceSansBold,
+		Font = Enum.Font.PoppinsBold,
 		Text = options.Title,
 		Theme = {TextColor3 = {"Tertiary", 15}},
 		TextSize = 16,
@@ -3204,7 +3204,7 @@ function Library:prompt(options)
 			Theme = {BackgroundColor3 = "Tertiary"},
 			Text = tostring(text):upper(),
 			TextSize = 13,
-			Font = Enum.Font.SourceSansBold,
+			Font = Enum.Font.PoppinsBold,
 			BackgroundTransparency = 1,
 			TextTransparency = 1
 		}):round(4)
