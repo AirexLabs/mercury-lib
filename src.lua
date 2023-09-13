@@ -142,7 +142,7 @@ function Library:object(class, properties)
 		BorderSizePixel = 0,
 		AutoButtonColor = false,
 		-- Font = Enum.Font.SourceSans,
-        FontFace = Font.new("rbxassetid://12187365977", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
 		Text = ""
 	}
 
@@ -659,7 +659,7 @@ function Library:create(options)
 		Position = UDim2.new(0, 5, 1, -6),
 		Size = UDim2.new(0.2, 0, 0, 10),
 		-- Font = Enum.Font.SourceSans,
-        FontFace = Font.new("rbxassetid://12187365977", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
 		Text = "Status | Idle",
 		Theme = {TextColor3 = "Tertiary"},
 		TextSize = 14,
@@ -683,7 +683,7 @@ function Library:create(options)
 		TextXAlignment = Enum.TextXAlignment.Left,
 		Size = UDim2.new(1, -45, 0.5, 0),
 		-- Font = Enum.Font.SourceSans,
-        FontFace = Font.new("rbxassetid://12187365977", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
 		TextTruncate = Enum.TextTruncate.AtEnd
 	})
 
@@ -1204,7 +1204,7 @@ function Library:tab(options)
 		TextXAlignment = Enum.TextXAlignment.Left,
 		Size = UDim2.new(1, -45, 0.5, 0),
 		-- Font = Enum.Font.SourceSans,
-        FontFace = Font.new("rbxassetid://12187365977", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
 		TextTruncate = Enum.TextTruncate.AtEnd
 	})
 
