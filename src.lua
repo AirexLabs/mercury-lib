@@ -142,7 +142,7 @@ function Library:object(class, properties)
 		BorderSizePixel = 0,
 		AutoButtonColor = false,
 		-- Font = Enum.Font.SourceSans,
-        FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+		FontFace = Font.new("rbxassetid://11702779409", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
 		Text = ""
 	}
 
@@ -158,7 +158,7 @@ function Library:object(class, properties)
 
 	function methods:tween(options, callback)
 		local options = Library:set_defaults({
-			Length = 0.2,
+			Length = 0.3,
 			Style = Enum.EasingStyle.Cubic,
 			Direction = Enum.EasingDirection.InOut
 		}, options)
@@ -367,7 +367,7 @@ function Library:show(state)
 	self.Toggled = state
 	self.mainFrame.ClipsDescendants = true
 	if state then
-		self.mainFrame:tween({Size = self.mainFrame.oldSize, Length = 0.25}, function()
+		self.mainFrame:tween({Size = self.mainFrame.oldSize, Length = 0.3}, function()
 			rawset(self.mainFrame, "oldSize", (state and self.mainFrame.oldSize) or self.mainFrame.Size)
 			self.mainFrame.ClipsDescendants = false
 		end)
@@ -376,7 +376,7 @@ function Library:show(state)
 	else		
 		self.mainFrame:fade(not state, self.mainFrame.BackgroundColor3, 0.15)
 		wait(0.1)
-		self.mainFrame:tween{Size = UDim2.new(), Length = 0.25}
+		self.mainFrame:tween{Size = UDim2.new(), Length = 0.3}
 	end
 end
 
@@ -659,7 +659,7 @@ function Library:create(options)
 		Position = UDim2.new(0, 5, 1, -6),
 		Size = UDim2.new(0.2, 0, 0, 10),
 		-- Font = Enum.Font.SourceSans,
-        FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        FontFace = Font.new("rbxassetid://11702779409", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
 		Text = "Status | Idle",
 		Theme = {TextColor3 = "Tertiary"},
 		TextSize = 14,
@@ -683,7 +683,7 @@ function Library:create(options)
 		TextXAlignment = Enum.TextXAlignment.Left,
 		Size = UDim2.new(1, -45, 0.5, 0),
 		-- Font = Enum.Font.SourceSans,
-        FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        FontFace = Font.new("rbxassetid://11702779409", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
 		TextTruncate = Enum.TextTruncate.AtEnd
 	})
 
@@ -780,7 +780,7 @@ function Library:create(options)
 
 		local displayName = profile:object("TextLabel", {
 			RichText = true,
-			Text = "Welcome, <font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>",
+			Text = "Welcome,<font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>",
 			TextScaled = true,
 			Position = UDim2.new(0, 105,0, 10),
 			Theme = {TextColor3 = {"Tertiary", 10}},
@@ -1204,7 +1204,7 @@ function Library:tab(options)
 		TextXAlignment = Enum.TextXAlignment.Left,
 		Size = UDim2.new(1, -45, 0.5, 0),
 		-- Font = Enum.Font.SourceSans,
-        FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        FontFace = Font.new("rbxassetid://11702779409", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
 		TextTruncate = Enum.TextTruncate.AtEnd
 	})
 
