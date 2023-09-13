@@ -104,7 +104,7 @@ local selectedTab
 Library._promptExists = false
 Library._colorPickerExists = false
 
-local GlobalTweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
+local GlobalTweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut)
 
 function Library:set_defaults(defaults, options)
 	defaults = defaults or {}
@@ -141,7 +141,8 @@ function Library:object(class, properties)
 	local forcedProps = {
 		BorderSizePixel = 0,
 		AutoButtonColor = false,
-		Font = Enum.Font.Poppins,
+		-- Font = Enum.Font.SourceSans,
+        FontFace = Font.new("rbxassetid://11702779409", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
 		Text = ""
 	}
 
@@ -158,7 +159,7 @@ function Library:object(class, properties)
 	function methods:tween(options, callback)
 		local options = Library:set_defaults({
 			Length = 0.2,
-			Style = Enum.EasingStyle.Linear,
+			Style = Enum.EasingStyle.Cubic,
 			Direction = Enum.EasingDirection.InOut
 		}, options)
 		callback = callback or function() return end
@@ -657,7 +658,8 @@ function Library:create(options)
 		BackgroundTransparency = 1,
 		Position = UDim2.new(0, 5, 1, -6),
 		Size = UDim2.new(0.2, 0, 0, 10),
-		Font = Enum.Font.Poppins,
+		-- Font = Enum.Font.SourceSans,
+        FontFace = Font.new("rbxassetid://11702779409", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
 		Text = "Status | Idle",
 		Theme = {TextColor3 = "Tertiary"},
 		TextSize = 14,
@@ -680,7 +682,8 @@ function Library:create(options)
 		Position = UDim2.new(0, 25, 0.5, 0),
 		TextXAlignment = Enum.TextXAlignment.Left,
 		Size = UDim2.new(1, -45, 0.5, 0),
-		Font = Enum.Font.Poppins,
+		-- Font = Enum.Font.SourceSans,
+        FontFace = Font.new("rbxassetid://11702779409", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
 		TextTruncate = Enum.TextTruncate.AtEnd
 	})
 
@@ -1025,7 +1028,7 @@ function Library:notification(options)
 		BackgroundTransparency = 1,
 		Position = UDim2.fromOffset(23, 0),
 		Size = UDim2.new(1, -60,0, 20),
-		Font = Enum.Font.PoppinsBold,
+		-- Font = Enum.Font.SourceSansBold,
 		Text = options.Title,
 		Theme = {TextColor3 = "Tertiary"},
 		TextSize = 17,
@@ -1200,7 +1203,8 @@ function Library:tab(options)
 		Position = UDim2.new(0, 25, 0.5, 0),
 		TextXAlignment = Enum.TextXAlignment.Left,
 		Size = UDim2.new(1, -45, 0.5, 0),
-		Font = Enum.Font.Poppins,
+		-- Font = Enum.Font.SourceSans,
+        FontFace = Font.new("rbxassetid://11702779409", Enum.FontWeight.Regular, Enum.FontStyle.Normal),
 		TextTruncate = Enum.TextTruncate.AtEnd
 	})
 
@@ -2415,7 +2419,7 @@ function Library:color_picker(options)
 
 					local label = holder:object("TextLabel", {
 						Text = "Color Picker",
-						Font = Enum.Font.PoppinsBold,
+						-- Font = Enum.Font.SourceSansBold,
 						AnchorPoint = Vector2.new(1,0),
 						BackgroundTransparency = 1,
 						Position = UDim2.fromScale(1, 0),
@@ -3153,7 +3157,7 @@ function Library:prompt(options)
 		BackgroundTransparency = 1,
 		Size = UDim2.new(1, 0, 0, 20),
 		TextXAlignment = Enum.TextXAlignment.Center,
-		Font = Enum.Font.PoppinsBold,
+		-- Font = Enum.Font.SourceSansBold,
 		Text = options.Title,
 		Theme = {TextColor3 = {"Tertiary", 15}},
 		TextSize = 16,
@@ -3204,7 +3208,7 @@ function Library:prompt(options)
 			Theme = {BackgroundColor3 = "Tertiary"},
 			Text = tostring(text):upper(),
 			TextSize = 13,
-			Font = Enum.Font.PoppinsBold,
+			-- Font = Enum.Font.SourceSansBold,
 			BackgroundTransparency = 1,
 			TextTransparency = 1
 		}):round(4)
@@ -3477,7 +3481,7 @@ function Library:textbox(options)
 				textBox.AbsoluteObject:TweenSize(
 					UDim2.fromOffset(math.clamp(textBox.TextBounds.X + 20, 0, 0.5 * textboxContainer.AbsoluteSize.X), 20),
 					Enum.EasingDirection.InOut,
-					Enum.EasingStyle.Linear,
+					Enum.EasingStyle.Cubic,
 					0.1,
 					true
 				)
@@ -3489,7 +3493,7 @@ function Library:textbox(options)
 			textBox.AbsoluteObject:TweenSize(
 				UDim2.fromOffset(math.clamp(textBox.TextBounds.X + 20, 0, 0.5 * textboxContainer.AbsoluteSize.X), 20),
 				Enum.EasingDirection.InOut,
-				Enum.EasingStyle.Linear,
+				Enum.EasingStyle.Cubic,
 				0.1,
 				true
 			)
